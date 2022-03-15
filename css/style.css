@@ -930,27 +930,33 @@
 
 #section07{
     width: 1920px;
-    background: green;
-    background:url("../img/section07/new_bg_after.png") no-repeat center;
+    background: black;
     background-size: cover;
 }
 
 #section07 .contain{
     display: flex;
-    height: 980px;
 }
 
 #section07 .photo{
     display: flex;
+    height: 100vh;
 }
 
 #section07 .photo_section{
     z-index: 1;
+    height: 100%;
 }
 
 #section07 .video_section{
-    left: 15%;
+    width: 816px;
+    height: 100vh;
     position: absolute;
+    right: 290px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 0;
 }
 
