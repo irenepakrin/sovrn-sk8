@@ -1,0 +1,1638 @@
+
+
+#cursor{
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 999999;
+    opacity: 0;
+}
+
+#cursor .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    background: url(../img/menu/menu_bg.png);
+    display: none;
+}
+
+#cursor .round{
+    animation: round 2s infinite linear;
+}
+@keyframes round {
+    to{
+        transform: rotate(1turn)
+    }
+}
+#menu .cancle_btn{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 99;
+}
+
+#menu .menu_list{
+    width: 1140px;
+    height: 760px;
+    /* margin: auto auto 0; */
+    position: absolute;
+    left: 112px;
+    top: 50%;
+    transform: translateY(-52%);
+    z-index: 10;
+}
+
+#menu .menu_list > li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 30px;
+    border-bottom: 1px solid white;
+}
+
+#menu .menu_list > li > :nth-child(4){
+    border-bottom: none;
+}
+
+#menu .menu_list > li > .arrow{
+    position: absolute;
+    right: 350px;
+    transition: all .5s;
+    opacity: 0;
+}
+
+#menu .menu_list > li:hover > .arrow{
+    transform: translate(50px);
+    opacity: 1;
+}
+
+#menu .menu_list > li > .photo{
+    transition: all 0.5s;
+}
+
+#menu .menu_list > li:hover > .photo{
+    transform: translateX(-50px);
+}
+
+#menu .table_bg{
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-48%);
+}
+
+#menu .video_section{
+    overflow: hidden;
+}
+
+#menu .video_section .video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all .4s;
+}
+#menu .video_section .video.on{
+    opacity: 1;
+    z-index: 1;
+}
+
+#header{
+    height: 50px;
+    padding: 10px 70px 10px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    mix-blend-mode: difference;
+}
+
+.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.scroll{
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+.scroll .arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll .arrow img{
+    transform: rotate(90deg);
+    transition:all .5s;
+}
+
+/* section 00 */
+
+#section00{
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background:url("../img/section00/bg.png") no-repeat center;
+    background-size: cover;
+    overflow: initial;
+    display: block;
+}
+
+#section00 .logo{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#section00 .cards{
+    width: 100vw;
+    height: 758px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+#section00 .cards .slick-slide{
+    margin-left: 620px;
+}
+
+
+/* section 01 */
+
+#section01{
+    width: 100vw;
+    height: 2030px;
+    background: orange;
+    background:url("../img/section01/intro_bg.png") no-repeat center;
+    background-size: cover;
+    overflow: initial;
+}
+
+#section01 .text_container{
+    width: 1810px;
+    height: 640px;
+    position: absolute;
+    top: 488px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#section01 .text_container .title_01{
+    display: flex;
+    width: 1610px;
+    justify-content: space-between;
+    margin-left: 30px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section01.on .text_container .title_01{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section01 .text_container .title_02{
+    margin: 38px 286px 0;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s 0.5s;
+}
+
+#section01.on .text_container .title_02{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section01 .text_container .title_03{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section01.on .text_container .title_03{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section01 .text_container .title_03 .sub{
+    margin-right: 38px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s 0.5s;
+}
+
+#section01.on .text_container .title_03 .sub{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section01 .text_container .title_04{
+    margin-top: 120px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section01.on .text_container .title_04{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#section01 .scroll_guide{
+    width: 100vw;
+    height: 338px;
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section01 .video_container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10; 
+}
+
+#section01 .video{
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    right: 300px;
+    bottom: 10px;
+    border-radius: 110px;
+    overflow: hidden;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#section01-2{
+    background: #000;
+    height: 1300px;
+}
+
+
+
+/* section 02 */
+
+#section02{
+    
+    width: 100vw;
+    height: 300vh;
+    background: black;
+    background-size: cover;
+}
+
+.trigger-this-2{
+    height: 100%;
+}
+
+.fix-this-2{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    position: relative;
+}
+
+#section02 .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-30%);
+    z-index: 10;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section02.on .text{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+#section02 .photo{
+    width: 1790px;
+    height: 1450px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 900px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+
+#section02 .photo .photo_01{
+    align-self: flex-end;
+}
+
+#section02 .photo .photo_02{
+    align-self: center;
+}
+
+#section02 .photo .photo_03{
+    align-self: flex-start;
+}
+
+
+
+
+
+/* section 03 */
+
+#section03{
+    width: 100vw;
+    height: 2436px;
+    background: white;
+    background-size: cover;
+}
+
+#section03 .line{
+    position: absolute;
+    top: 194px;
+    width: 1920px;
+    height: 1615px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#section03 .titles{
+    width: 1800px;
+    margin: 0 auto;
+    padding-top:200px;
+}
+
+
+#section03 .titles > div:first-child{
+    border-top: 1px solid black;
+}
+#section03 .titles > div{
+    padding: 110px 30px;
+    border-bottom: 1px solid gray;
+    position:relative;
+}
+
+#section03 .titles > div > div:first-child{
+    transition: all .5s;
+}
+
+#section03 .titles > div:hover > div:first-child{
+    transform: translateX(100px);
+}
+
+#section03 .video{
+    width: 650px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    transform: translate(110%,-50%);
+    right: 0;
+    transition: all 1s;
+    cursor: progress;
+    /*cursor: url("../img/section03/visual_play_rolling.png") default;*/
+}
+
+
+#section03 .titles > div:hover > .video{
+    transform: translate(0,-50%);
+}
+
+#section03 .view_more{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50px;
+    bottom: 30px;
+}
+
+
+
+
+
+
+
+/* section 04 */ /* rightside_scoll */
+
+#section04{
+    height:1000vh;
+}
+
+.trigger-this-4{
+    height: 100%;
+}
+
+.fix-this-4{
+    
+    height: 100vh;
+    display:flex;
+}
+
+.fix-this-4 > section{
+    background: orange;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+
+}
+
+.fix-this-4 > section:nth-child(even){
+    background: dodgerblue;
+}
+
+
+#section04-1{
+    background:url("../img/section04/team_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+
+
+#section04-1 .contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    width: 1620px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#section04-1 .contain_01{
+    display: flex;
+    align-items: center;
+    left: 230px;    
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04-1.on .contain_01{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section04-1 .contain_01 .photo_01{
+    position: relative;
+    right: 620px;
+    top: 5px;
+}
+
+#section04-1 .contain_01 .photo_01 .num{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#section04-1 .contain_01 .text_intro{
+    position: relative;
+    top: 40px;
+    left: 140px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1s .5s;
+}
+
+#section04-1.on .contain_01 .text_intro{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#section04-1 .contain_02{
+    display: flex;
+    padding-top: 10px;
+    margin-left: 512px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04-1.on .contain_02{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section04-1 .contain_02 .text_01{
+    position: relative;
+    top: 54px;
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1s .5s;
+}
+
+#section04-1.on .contain_02 .text_01{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#section04-1 .contain_02 .text_02{
+    position: relative;
+    left: 90px;
+}
+
+#section04-1 .contain_03{
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 30px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section04-1.on .contain_03{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section04-1 .contain_03 .photo_02{
+    position: relative;
+    right: 624px;
+    bottom: 10px;
+}
+
+#section04-1 .contain_03 .photo_02 .num{
+    position: relative;
+    bottom: 10px;
+    left: 340px;
+}
+
+/* section 05 */
+
+#section05{
+
+    width: 2240px;
+    background: #f0f0f0;
+    background-size: cover;
+}
+
+#section05 .contain_5{
+    display: flex;
+}
+
+#section05 .rolling_box{
+    position: absolute;
+    width: 290px;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-right: 1px solid #151515;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#section05 .rolling_box .text{
+    position: absolute; 
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#section05 .rolling_box .text > div{
+    animation: txt01 10s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes txt01{
+    to{
+        transform: translateY(-2211px);
+    }
+}
+
+
+#section05 .circle{
+    position: absolute;
+    right: 32px;
+    top: 36vh;
+}
+
+#section05 .hover{
+    z-index: 2;
+}
+
+#section05 .hover .before{
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+}
+
+#section05 .hover .before .pink{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top:0;
+    background: url(../img/section05/new_photo_hover.png);
+    transition: all .3s;
+    opacity: 0;
+}
+
+#section05 .hover .before:hover .pink{
+    opacity:1;
+}
+
+#section05 .photo_03{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) scale(0.5);
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+/*#section05 .photo_03 > img{*/
+/*    */
+/*}*/
+
+
+#section05.on .photo_03{
+    opacity: 1;
+    /*scale: (1.5);*/
+    transform:translateY(-50%) scale(1);
+    overflow: hidden;
+}
+
+
+/* section 06 */
+
+#section06{
+    width: 5440px;
+    background: blue;
+    background:url("../img/section06/new_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#section06 .contain_01{
+    display: flex;
+}
+
+#section06 .rolling_box{
+    position: absolute;
+    width: 290px;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#section06 .rolling_box .circle{
+    position: absolute;
+    right: 32px;
+    top: 36vh;
+}
+
+#section06 .rolling_box .text{
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#section06 .rolling_box .text > div{
+    animation: txt02 10s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes txt02{
+    to{
+        transform: translateY(-1382px);
+    }
+}
+
+
+#section06 .title {
+    width: 1170px;
+    height: 100vh;
+    position: absolute;
+    left: 290px;
+    bottom: 0%;
+}
+
+#section06 .title .upper{
+    display: flex;
+    top: 134px;
+    left: 132px;
+}
+
+#section06 .title .upper .elements{
+    position: absolute;
+    top: 14%;
+    left: 14%;
+    transform: translate(-50%, -48%);
+    z-index: 3;
+}
+
+#section06 .title .upper .photo{
+    position: absolute;
+    left: 176px;
+    top: 60px;
+    z-index: 2;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s .5s;
+}
+
+#section06.on .title .upper .photo{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section06 .title .upper .text{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section06.on .title .upper .text{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#section06 .title .upper .box{
+    width: 880px;
+    height: 360px;
+    background: #625c4f;
+    opacity: 20%;
+}
+
+#section06 .title .down{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+}
+
+#section06 .title .down .photo_01{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section06.on .title .down .photo_01{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section06 .title .down .text_01{
+    margin-left: 110px;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 1s 0.3s;
+}
+
+#section06.on .title .down .text_01{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section06 .title .down .text_02{
+    position: absolute;
+    right: 0;
+    align-self: end;
+    margin-bottom: 40px;
+}
+
+#section06 .title .down .photo_02{
+    position: relative;
+    right: 250px;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 1s 0.5s;
+}
+
+#section06.on .title .down .photo_02{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#section06 .contain_01 .video_section{
+    position: absolute;
+    width: 1400px;
+    height: 100vh;
+    left: 28%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section06 .contain_02{
+    position: absolute;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+#section06 .contain_02 .boards{
+    width: 1340px;
+    position: absolute;
+    top: 0%;
+    transform: translate(-66%, 30%);
+    right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section06 .boards .board_01{
+    transform: translateY(400px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section06.on .boards .board_01{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+#section06 .contain_02 .detile{
+    height: 100vh;
+    right: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#section06 .contain_02 .detile .text{
+    position: relative;
+    bottom: 44px;
+}
+
+#section06 .contain_02 .detile .photo_02{
+    position: relative;
+    left: 432px;
+}
+
+
+
+/* section 07 */
+
+#section07{
+    width: 1920px;
+    background: green;
+    background:url("../img/section07/new_bg_after.png") no-repeat center;
+    background-size: cover;
+}
+
+#section07 .contain{
+    display: flex;
+    height: 980px;
+}
+
+#section07 .photo{
+    display: flex;
+}
+
+#section07 .photo_section{
+    z-index: 1;
+}
+
+#section07 .video_section{
+    left: 15%;
+    position: absolute;
+    z-index: 0;
+}
+
+#section07 .rolling_box{
+    position: absolute;
+    right: 0%;
+    width: 290px;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#section07 .rolling_box .circle{
+    position: absolute;
+    right: 32px;
+    top: 36vh;
+}
+
+#section07 .rolling_box .text{
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#section07 .rolling_box .text > div{
+    animation: txt03 10s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes txt03{
+    to{
+        transform: translateY(-2211px);
+    }
+}
+
+
+
+
+
+
+
+
+/* section 08 */ /* up_side_down_scoll */
+
+#section08{
+    height: 4650px;
+
+    background: yellow;
+    background:url("../img/section08/member_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#section08 .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 164px;
+}
+
+#section08 .top .img_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+#section08.on .top .img_section{
+    transform: translateY(0);
+    opacity:1;
+}
+
+#section08 .top .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 70px;
+    position: relative;
+    bottom: 192px;
+}
+
+#section08 .top .text .text_01{
+    position: relative;
+    left: 116px;
+}
+
+#section08 .top .text .text_03{
+    position: relative;
+    left: 120px;
+}
+
+#section08 .top .rolling{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    bottom: 540px;
+    z-index: 1;
+    height: 200px;
+}
+
+#section08 .rolling .up{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#section08 .rolling .up > div{
+    animation: txt04 20s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes txt04{
+    to{
+        transform: translateX(-4358px);
+    }
+}
+
+#section08 .rolling .down{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 110px;
+}
+
+#section08 .rolling .down > div{
+    animation: txt05 20s infinite linear;
+}
+@keyframes txt05{
+    to{
+        transform: translateX(-6566px);
+    }
+}
+
+#section08 .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 162px;
+    margin-bottom: 80px;
+}
+
+#section08 .title .title_01{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s 1s;
+}
+
+#section08.on .title .title_01{
+    transform: translateY(0);
+    opacity:1;
+}
+
+#section08 .title .video_section{
+    background-color: beige;
+    width: 480px;
+    height: 370px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#section08 .logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#section08 .detile{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+}
+
+#section08 .photo_01{
+    position: relative;
+    padding: 70px;
+    top: 200px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s 1.5s;
+}
+
+#section08.on .photo_01{
+    transform: translateY(0);
+    opacity:1;
+}
+
+#section08 .photo_02{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 10;
+    position: relative;
+    bottom: 110px;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 1s 2s;
+}
+
+#section08.on .photo_02{
+    transform: translateX(0);
+    opacity:1;
+}
+
+#section08 .photo_02 .text{
+    display: flex;
+}
+
+
+
+
+/* section 09 */
+
+#section09{
+    background: darkmagenta;
+    background-size: cover;
+    height: 700vh;
+}
+
+.trigger-this-9{
+    height: 100%;
+}
+
+.fix-this-9{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background:url("../img/section09/member_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#section09 .contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -35%);
+    width: 1654px;
+    height: 640px;
+}
+
+#section09 .text_02{
+    align-self: center;
+}
+
+#section09 .text_03{
+    align-self: flex-end;
+}
+
+#section09 .text_04{
+    margin-left: 90px;
+}
+
+#section09 .members{
+    width: 1550px;
+    height: 4030px;
+    margin: 0 auto;
+    position: absolute;
+    top: 900px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+#section09 .members > div{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#section09 .mem_01{
+    padding-left: 43%;
+}
+#section09 .mem_01{
+    padding-left: 43%;
+}
+#section09 .mem_02{
+    padding-left: 70%;
+}
+#section09 .mem_03{
+    padding-left: 10%;
+}
+#section09 .mem_04{
+    padding-left: 50%;
+}
+#section09 .mem_06{
+    padding-left: 54%;
+}
+#section09 .mem_07{
+    padding-left: 20%;
+}
+
+
+
+
+
+
+
+
+/* section 10 */ /* left_side_scroll */
+
+#section10{
+    height:1000vh;
+}
+
+.trigger-this-10{
+    height: 100%;
+}
+
+.fix-this-10{
+    
+    height: 100vh;
+    display:flex;
+}
+
+.fix-this-10 > section{
+    background: orange;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+
+}
+
+.fix-this-10 > section:nth-child(even){
+    background: dodgerblue;
+}
+
+
+#section10-1{
+    background:url("../img/section10/product_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#section10-1 .text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(0);
+    transition: all 1s;
+}
+
+#section10-1.on .text{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* section 11 */
+
+#section11{
+    width: 1920px;
+    background: #d2d1d1;
+    background-size: cover;
+}
+
+#section11 .photo{
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+#section11 .side{
+    display: flex;
+    justify-content: space-between;
+    width: 1090px;
+    height: 620px;
+}
+
+#section11 .photo_02{
+    align-self: center;
+}
+
+#section11 .photo_03>:nth-child(1){
+    margin-top: 60px;
+}
+
+#section11 .title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-180%, -50%);
+    display: flex;
+    width: 200px;
+    height: 870px;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+#section11 .text_02{
+    align-self: flex-end;
+}
+
+#section11 .back{
+    position: absolute;
+    right: 1%;
+    bottom: 4%;
+    z-index: 1;
+}
+
+
+/* section 12 */
+
+#section12{
+    width: 1920px;
+    background: #d2d1d1;
+    background-size: cover;
+}
+
+#section12 .video_section{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+
+
+/* section 13 */
+
+#section13{
+    width: 4230px;
+    background: green;
+    background:url("../img/section13/product_bg.png") no-repeat center;
+    background-size: cover;
+}
+
+#section13 .contain{
+    display: flex;
+}
+
+#section13 .contain .title{
+    width: 694px;
+    height: 428px;
+    position: absolute;
+    margin-left: 70px;
+    bottom: 70px;
+    z-index: 3;
+}
+
+#section13 .contain .title .up{
+    margin-bottom: 60px;
+}
+
+#section13 .collection_01{
+    width: 2366px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 380px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#section13 .collection_01 .contain_01{
+    width: 1030px;
+    height: 730px;
+    display: flex;
+    align-self: center;
+}
+
+#section13 .collection_01 .contain_01-1{
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-left: -6%;
+}
+
+#section13 .collection_01 .contain_01-1 > :nth-child(1){
+    width: 280px;
+    bottom: 20px;
+    margin: 0 auto;
+}
+
+#section13 .photo_02_tag{
+    width: 162px;
+    margin: 0 100%;
+}
+
+#section13 .collection_01 .photo_02{
+    margin: 80px 0;
+}
+
+#section13 .contain_02{
+    width: 414px;
+    height: 634px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 110px;
+    align-items: center;
+    align-self: flex-end;
+}
+
+#section13 .photo_03{
+    margin-bottom: 80px;
+}
+
+#section13 .photo_03 > :nth-child(1){
+    width: 116px;
+    margin: 0 auto 20px auto;
+}
+
+#section13 .photo_04 .tag{
+    margin: 0 0 200px 160px;
+}
+
+#section13 .contain_02 .photo_04{
+    align-self: flex-end;
+}
+
+#section13 .contain_03{
+    width: 520px;
+    height: 634px;
+}
+
+#section13 .contain_03 .photo_05{
+    position: relative;
+    display: flex;
+    top: 300px;
+    right: 20px;
+}
+
+#section13 .photo_05 .tag{
+    margin: auto 20px auto 0px;
+}
+
+#section13 .contain_03 .photo_06{
+    width: 200px;
+    height: 270px;
+    position: relative;
+    left: 310px;
+    bottom: 330px;
+}
+
+#section13 .photo_06 > :nth-child(1){
+    width: 110px;
+    margin: 0 auto 20px auto;
+}
+
+#section13 .collection_02{
+    width: 680px;
+    height: 672px;
+    position: absolute;
+    right: 490px;
+    top: 240px;
+    z-index: 3;
+}
+
+#section13 .collection_02 .title_01 {
+    width: 369px;
+    height: 128px;
+    position: absolute;
+}
+
+#section13 .collection_02 .title_01 .tag{
+    margin-top: 40px;
+}
+
+#section13 .collection_02 .photo_01{
+    top: 250px;
+    position: absolute;
+}
+
+#section13 .collection_02 .photo_01 .tag{
+    width: 200px;
+    margin: 30px auto;
+}
+
+#section13 .line{
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+}
+
+
+
+#section13 .rolling_box{
+    position: absolute;
+    right: 0%;
+    width: 290px;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#section13 .rolling_box .circle{
+    position: absolute;
+    right: 32px;
+    top: 36vh;
+}
+
+#section13 .rolling_box .text{
+    position: absolute;
+    left: 50%;
+    height: 100vh;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+#section13 .rolling_box .text > div{
+    animation: txt06 10s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes txt06{
+    to{
+        transform: translateY(-1382px);
+    }
+}
+
+
+
+
+/* section 14 *//* xyaxis_scroll */
+
+#section14{
+    width: 100vw;
+}
+
+#section14 .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section14 .title > :nth-child(2){
+    margin-top: 50px;
+}
+
+#section14 .link{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+    bottom: -30%;
+    z-index: 10;
+}
+
+#section14 .video_bg{
+    z-index: 1;
+}
+
+
+.pop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: none;
+}
+.pop .close{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 999;
+}
+
+
+
+
+
+
+
